@@ -697,6 +697,7 @@
 	code --install-extension felixfbecker.php-intellisense 
 	code --install-extension mohsen1.prettify-json 
 	code --install-extension felixfbecker.php-debug 
+	code --install-extension linyang95.php-symbols 
 	code --install-extension felixfbecker.php-pack 
 	code --install-extension vsmobile.vscode-react-native 
 	code --install-extension rebornix.Ruby 
@@ -852,6 +853,9 @@
 	$ sudo apt update
 	$ sudo apt install -f
 	$ sudo apt upgrade
+
+
+
 
 
 

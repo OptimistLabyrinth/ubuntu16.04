@@ -566,32 +566,88 @@
 
 
 
-36. install 'Android SDK'
-	* link : https://developer.android.com/studio/index.html?hl=ko
+
+36. install 'Android Studio'
+	* link : https://developer.android.com/studio/install.html
 	
-	Download "only SDK(software development kit)" from the link below
+	Go to <https://developer.android.com/studio/index.html> and Downloads the appropriate file
+
+	$ sudo apt update
+	$ sudo apt-get install lib32z1 lib32ncurses5 lib32stdc++6
+	$ sudo apt-get install libc6:i386 libncurses5:i386 libstdc++6:i386 lib32z1 libbz2-1.0:i386
 	
 	$ cd
-	$ mkdir SDK
 	$ cd Downloads
-	$ 7z e sdk-tools-linux- -o/home/yks93/SDK
-	$ cd 
-	$ cd SDK
+	$ 7z x android-studio-ide~
+	$ ls (::the result of this command will show a new folder named 'android-studio')
+	$ cp -R android-studio /home/yks93/
+	$ cd
+	$ cd android-studio
 	$ pwd
-		::= /home/yks93/SDK
+		::= /home/yks93/android-studio
 	
 	$ sudo gedit /etc/environment 
 		==>>
-		$PATH = $PATH + /home/yks93/SDK
+		$ANDROID_HOME=/home/yks93/android-studio
+		$PATH = $PATH + $ANDROID_HOME/bin
 		<<==
 	
 	$ sudo gedit /etc/profile.d/myenvvars.sh
 		==>> 
-		$PATH = $PATH + /home/yks93/SDK
+		$ANDROID_HOME=/home/yks93/android-studio
+		$PATH = $PATH + $ANDROID_HOME/bin
 		<<==
+	
 	$ cd
 	$ source .bashrc
 	$ echo $PATH
+	
+	***** restart computer *****
+	$ cd android-studio/bin
+	$ bash studio.sh
+		-> 'Android SDK Location -- should be : /home/yks93/android-SDK
+	
+	***** After finishing Initial Android-Studio Setup *****
+	$ cd
+	$ sudo gedit /etc/environment 
+		==>>
+		$SDK_HOME=/home/yks93/android-sdk
+		$PATH = $PATH + $SDK_HOME/tools + $SDK_HOME/platform-tools
+		<<==
+	
+	$ sudo gedit /etc/profile.d/myenvvars.sh
+		==>>
+		$SDK_HOME=/home/yks93/android-sdk
+		$PATH = $PATH + $SDK_HOME/tools + $SDK_HOME/platform-tools
+		<<==
+	
+	***** create desktop launcher for Android-Studio *****
+	
+	$ sudo gedit /usr/share/applications/android-studio.desktop
+		==>>
+		
+		[Desktop Entry]
+		Version=3.0
+		Type=Application
+		Name=Android-Studio
+		GenericName=android
+		Comment=Android Studio IDE for Android Application Development
+		Exec=bash -c 'export PATH="$PATH" && /home/yks93/android-studio/bin/studio.sh'
+		Categories=Development;Science;IDE;Qt;Education;
+		Icon=/home/yks93/android-studio/bin/studio.png
+		Terminal=false
+		
+		<<==
+	
+	***** Android KVM Linux Installation *****
+	* link : https://developer.android.com/studio/run/emulator-acceleration.html?utm_source=android-studio#vm-linux
+	* link : https://help.ubuntu.com/community/KVM/Installation 
+	
+	$ sudo apt update
+	$ sudo apt install cpu-checker
+	$ egrep -c '(vmx|svm)' /proc/cpuinfo
+	$ kvm-ok
+	$ sudo apt install --install-suggests qemu-kvm libvirt-bin ubuntu-vm-builder bridge-utils ia32-libs-multiarch
 
 37. install eclipse-oxygen 
 	* link : http://www.eclipse.org/downloads/eclipse-packages/ 
@@ -844,15 +900,60 @@
 	# p=/home/yks93/swift-4.0.3-RELEASE-ubuntu16.04/usr/bin
 
 43. install 'intelliJ'
-	* link : https://itsfoss.com/install-intellij-ubuntu-linux/ 
-	* link : https://github.com/mmk2410/intellij-idea-community 
+	* link : https://www.jetbrains.com/help/idea/install-and-set-up-intellij-idea.html
+	***** Never Download intelliJ IDE from PPA something like ppa:mmk2410~*****
 	
-	$ sudo add-apt-repository ppa:mmk2410/intellij-idea-community
+	Go to <https://www.jetbrains.com/idea/download/#section=linux> and download .tar.gz file
+	
+	$ cd
+	$ cd Downloads
+	$ tar xvfz ideaIC~.tar.gz
+	$ cp -R idea-IC~ /home/yks93
+	$ cd
+	$ ls
+	$ cd Downloads
+	$ rm -R idea-IC~
+	
+	***** make a desktop launcher for intelliJ IDE *****
+	-> launch intelliJ for the first time, then the tutorials allow the users to make desktop launcher
+	
+	$ cd /home/yks93/idea-IC-173.3942.27/bin
+	$ bash idea.sh
+	
+44. install 'Star UML' 
+	* link : 
+	* link : 
+	
+	Go to <http://staruml.io/download> 
+	Go to <https://launchpad.net/ubuntu/+archive/primary/+files/libgcrypt11_1.5.3-2ubuntu4.2_amd64.deb> 
+	
+	$ cd
+	$ cd Downloads
 	$ sudo apt update
-	$ sudo apt install intellij-idea-community
+	$ sudo dpkg -i libgcrypt11_1.5.3-2ubuntu4.2_amd64.deb
+	$ sudo dpkg -i StarUML-v2.8.0-64-bit.deb
+	
+45. install 'Linux Container'
+	* link : https://help.ubuntu.com/lts/serverguide/lxc.html
+	
 	$ sudo apt update
-	$ sudo apt install -f
-	$ sudo apt upgrade
+	$ sudo apt install --install-suggests lxc
+	$ sudo apt install --install-suggests lxd
+	
+	
+	**** LET'S START USING LINUX CONTATINER *****
+	* link : https://linuxcontainers.org/lxc/getting-started/
+	* link : https://blog.scottlowe.org/2013/11/25/a-brief-introduction-to-linux-containers-with-lxc/
+	* link : https://askubuntu.com/questions/293275/what-is-lxc-and-how-to-get-started
+	
+	* link : https://www.itzgeek.com/how-tos/linux/ubuntu-how-tos/setup-linux-container-with-lxc-on-ubuntu-16-04-14-04.html
+	* link : https://www.digitalocean.com/community/tutorials/how-to-set-up-and-use-lxd-on-ubuntu-16-04
+	* link : https://nwgat.ninja/quick-easy-lxc-container-on-ubuntu-16-04/
+	* link : https://linuxconfig.org/getting-started-with-lxd-containers-on-ubuntu-16-04
+
+46. 
+
+
 
 
 

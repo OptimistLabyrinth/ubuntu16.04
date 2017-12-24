@@ -818,7 +818,7 @@
 	$ sudo apt-get install clang libicu-dev binutils
 	$ cd
 	$ cd Downloads
-	$ tar xvfz swift- /opt/
+	$ tar xvfz swift- /home/yks93/
 	
 	add the directory /home/yks93/swift~/usr/bin to $PATH environment variables 
 	
@@ -853,6 +853,7 @@
 	$ sudo apt update
 	$ sudo apt install -f
 	$ sudo apt upgrade
+
 
 
 

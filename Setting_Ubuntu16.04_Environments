@@ -168,7 +168,7 @@
 	$ sudo ufw allow https
 	$ sudo ufw allow ftp
 	$ sudo ufw enable
-	$ sudo ufw status verbose
+	$ sudo ufw status numbered
 
 21. install codecs and DVD player 
 
@@ -550,7 +550,68 @@
 	$ sudo apt install --install-suggests libghc-postgresql-libpq-dev libpqxx-4.0 libpqxx-dbg libpqxx-dev libpqxx-doc libpostgresql-jdbc-java python-psycopg2 python3-psycopg2 
 
 
+36. install 'Mongo DB' 
+	* link : https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/
+	* link : https://www.youtube.com/watch?v=mlODdwoK56A
+	* link : https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-mongodb-on-ubuntu-16-04
+	* link : https://www.digitalocean.com/community/tutorials/how-to-install-mongodb-on-ubuntu-16-04
+	
+	$ sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 2930ADAE8CAF5059EE73BB4B58712A2291FA4AD5
+	$ echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.6 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.6.list
+	$ sudo apt update
+	$ sudo apt install --install-suggests mongodb-org*
+	$ sudo apt upgrade
 
+	***** After Mongo DB is successfully installed *****
+	* link : https://www.howtoforge.com/tutorial/install-mongodb-on-ubuntu-16.04/
+	* link : https://docs.mongodb.com/manual/reference/configuration-options/
+	
+	$ sudo gedit /etc/mongod.conf
+		==>>
+		
+		#network interface
+		net:
+			~
+			bind_ip : 0.0.0.0 (allowing from all IPs)
+		
+		<<==
+		(CAUTION : first line 'security' is written without any indentation, second line 'authorization' is written after 2 spaces)
+	
+	If you need something to do some more on settings, 
+		-> $ sudo gedit /lib/systemd/system/mongod.service
+	would do the tricks.
+	
+	$ sudo mkdir /data
+	$ sudo mkdir /data/db
+	$ sudo chown -R yks93 /data
+	$ sudo chown yks93 /tmp/mongodb-27017.sock
+	
+	***** Adjust the Firewall to Allow Web Traffic *****
+	$ sudo ufw allow 27017/tcp
+	$ sudo ufw allow 27017/udp
+	$ sudo ufw status numbered 
+	$ sudo ufw reload
+	
+	***** make MongoDB starts at every booting *****
+	Select Unity Launcher (push windows button)
+	Select Startup Applications > Add 
+		> Name : Mongo DB connection
+		> Command : mongod
+		> Comment : open a connection to Mongo Databases
+	
+	***** Let's start Mongo DB *****
+	$ mongod
+	$ mongo
+	
+	***** exit mongod *****
+	$ ps -aux | grep "mongod" (=pidnum)
+	$ kill -15 [pidnum]
+	
+	***** install 'Studio 3T' *****
+	
+	
+	
+	
 	***** PHP Drivers *****
 	$ sudo apt update
 	$ sudo apt install --install-suggests php7.0*
@@ -567,7 +628,7 @@
 
 
 
-36. install 'Android Studio'
+37. install 'Android Studio'
 	* link : https://developer.android.com/studio/install.html
 	
 	Go to <https://developer.android.com/studio/index.html> and Downloads the appropriate file
@@ -649,7 +710,7 @@
 	$ kvm-ok
 	$ sudo apt install --install-suggests qemu-kvm libvirt-bin ubuntu-vm-builder bridge-utils ia32-libs-multiarch
 
-37. install eclipse-oxygen 
+38. install eclipse-oxygen 
 	* link : http://www.eclipse.org/downloads/eclipse-packages/ 
 	* link : http://ubuntuhandbook.org/index.php/2016/01/how-to-install-the-latest-eclipse-in-ubuntu-16-04-15-10/
 	
@@ -685,7 +746,7 @@
 		
 		<<==
 
-38. install 'Visual Studio Code'
+39. install 'Visual Studio Code'
 	* link : https://code.visualstudio.com/docs/setup/linux
 	
 	$ curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
@@ -763,7 +824,7 @@
 	code --install-extension Kasik96.swift 
 	code --install-extension DotJoshJohnson.xml 
 	
-39. install 'Git'
+40. install 'Git'
 	
 	$ sudo apt update
 	$ sudo apt install git
@@ -771,7 +832,7 @@
 	$ sudo apt update
 	$ sudo apt install build-essential libssl-dev libcurl4-gnutls-dev libexpat1-dev gettext unzip
 
-40. install 'Anaconda'
+41. install 'Anaconda'
 	* link : https://poweruphosting.com/blog/install-anaconda-python-ubuntu-16-04/
 	* link : https://www.digitalocean.com/community/tutorials/how-to-install-the-anaconda-python-distribution-on-ubuntu-16-04 
 	* link : https://medium.com/@GalarnykMichael/install-python-on-ubuntu-anaconda-65623042cb5a 
@@ -823,7 +884,7 @@
 		
 		<<==
 
-41-1. install 'Vivaldi Browser'
+42-1. install 'Vivaldi Browser'
 	* link : https://www.linuxbabe.com/ubuntu/install-vivaldi-1-2-ubuntu-16-04-via-official-apt-repository 
 	
 	$ wget http://repo.vivaldi.com/stable/linux_signing_key.pub
@@ -833,7 +894,7 @@
 	$ sudo apt update
 	$ sudo apt install vivaldi-stable
 
-41-2. install 'Opera Browser'
+42-2. install 'Opera Browser'
 	* link : https://deb.opera.com/manual.html
 	
 	$ sudo add-apt-repository 'deb https://deb.opera.com/opera-stable/ stable non-free'
@@ -841,7 +902,7 @@
 	$ sudo apt update
 	$ sudo apt-get install opera-stable
 
-42-1. install 'atom' 
+43-1. install 'atom' 
 	* link : http://flight-manual.atom.io/getting-started/sections/installing-atom/#platform-linux
 	
 	$ curl -L https://packagecloud.io/AtomEditor/atom/gpgkey | sudo apt-key add -
@@ -864,7 +925,7 @@
 	***** apm packages recommends ***** (Command : apm install ~)
 	-> script emmet atom-beautify ask-stack git-blame git-plus git-time-machine linter project-manager highlight-selected file-icons pigments minimap expose pane-layout-plus open-recent autocomplete-paths todo-show autoclose-html auto-detect-indentation keycount color-picker javascript-snippets atom-css-comb remote-edit goto-definition merge-conflicts simple-drag-drop-text custom-title android android-debugger 
 
-42-2. Setting Atom Editor as Swift IDE 
+43-2. Setting Atom Editor as Swift IDE 
 	* link : https://medium.com/@addamb/getting-started-with-vapor-and-swift-on-ubuntu-16-04-31a426654115 
 	* link : https://www.makeuseof.com/tag/start-programming-swift-ubuntu/ 
 	* link : https://swift.org/download/#releases 
@@ -899,7 +960,7 @@
 	# e=swiftProj01
 	# p=/home/yks93/swift-4.0.3-RELEASE-ubuntu16.04/usr/bin
 
-43. install 'intelliJ'
+44. install 'intelliJ'
 	* link : https://www.jetbrains.com/help/idea/install-and-set-up-intellij-idea.html
 	***** Never Download intelliJ IDE from PPA something like ppa:mmk2410~*****
 	
@@ -920,7 +981,7 @@
 	$ cd /home/yks93/idea-IC-173.3942.27/bin
 	$ bash idea.sh
 	
-44. install 'Star UML' 
+45. install 'Star UML' 
 	* link : 
 	* link : 
 	
@@ -933,7 +994,7 @@
 	$ sudo dpkg -i libgcrypt11_1.5.3-2ubuntu4.2_amd64.deb
 	$ sudo dpkg -i StarUML-v2.8.0-64-bit.deb
 	
-45. install 'Linux Container'
+46. install 'Linux Container'
 	* link : https://help.ubuntu.com/lts/serverguide/lxc.html
 	
 	$ sudo apt update
@@ -951,12 +1012,7 @@
 	* link : https://nwgat.ninja/quick-easy-lxc-container-on-ubuntu-16-04/
 	* link : https://linuxconfig.org/getting-started-with-lxd-containers-on-ubuntu-16-04
 
-46. 
-
-
-
-
-
+47. 
 
 
 

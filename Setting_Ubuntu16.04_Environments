@@ -1012,7 +1012,22 @@
 	* link : https://nwgat.ninja/quick-easy-lxc-container-on-ubuntu-16-04/
 	* link : https://linuxconfig.org/getting-started-with-lxd-containers-on-ubuntu-16-04
 
-47. 
+47. GUI Tools to see HARDWARE INFORMATION in Ubuntu/Debian Linux
+	* link : https://www.techgainer.com/5-gui-tools-to-see-hardware-information-in-ubuntulinux/
+	
+	$ sudo add-apt-repository ppa:i-nex-development-team/stable
+	$ sudo apt update
+	$ sudo apt-get install i-nex
+	
+	$ sudo apt-get install hardinfo
+	
+	$ sudo apt-get install sysinfo
+	
+	$ sudo apt-get install lshw-gtk
+
+48. 
+
+
 
 
 

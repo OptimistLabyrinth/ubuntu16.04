@@ -1019,13 +1019,26 @@
 	$ sudo apt update
 	$ sudo apt-get install i-nex
 	
+	
+	***** Below three are optional *****
 	$ sudo apt-get install hardinfo
 	
 	$ sudo apt-get install sysinfo
 	
 	$ sudo apt-get install lshw-gtk
 
-48. 
+48. install Clipboard Manager 'CopyQ'
+	* link : https://github.com/hluk/CopyQ
+	
+	$ sudo add-apt-repository ppa:hluk/copyq
+	$ sudo apt update
+	$ sudo apt install copyq
+
+
+
+
+
+
 
 
 

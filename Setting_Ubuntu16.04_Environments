@@ -45,7 +45,7 @@
 	$ sudo apt update
 	$ sudo apt install libreoffice
 
-9. Ubuntu Software > GIMP, VLC, bleachbit, GParted
+9. Ubuntu Software > GIMP, Inkscape, VLC, bleachbit, GParted
 
 10. install 'Google Chrome' 
 
@@ -305,7 +305,7 @@
 
 
 
-********** LAMP ********** LAMP ********** LAMP ********** LAMP ********** LAMP ********** LAMP ********** LAMP ********** LAMP ****
+****** LAMP ********** LAMP ********** LAMP ********** LAMP ********** LAMP ********** LAMP ********** LAMP ********** LAMP ******
 
 *** link : https://linode.com/docs/web-servers/lamp/install-lamp-stack-on-ubuntu-16-04/ 
 * link : https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu-16-04 
@@ -493,9 +493,15 @@
 
 	$ sudo systemctl restart apache2
 
+	***** PHP Drivers *****
+	$ sudo apt update
+	$ sudo apt install --install-suggests php7.0*
+	
+
 	** ** Trouble Shooting ** **
 	$ sudo systemctl status apache2
 	$ sudo systemctl restart apache2
+
 
 35. install 'PostgreSQL'
 	* link : https://www.postgresql.org/download/linux/ubuntu/
@@ -586,6 +592,21 @@
 	$ sudo chown -R yks93 /data
 	$ sudo chown yks93 /tmp/mongodb-27017.sock
 	
+	***** IMPORTANT : php for mongodb *****
+	* link : https://cloudstuff.tech/installing-php7-0-mongodb-extension-ubuntu-16-04/
+	
+	$ sudo apt update
+	$ sudo apt-get install libcurl4-openssl-dev pkg-config libssl-dev libsslcommon2-dev
+	$ pecl install mongodb
+	$ sudo gedit /etc/php/7.0/fpm/php.ini
+		=> 
+			((at the end of this file, append ~))
+			extension=mongodb.so
+		<=
+	
+	$ sudo systemctl restart php7.0-fpm
+	$ sudo systemctl restart apache2
+	
 	***** Adjust the Firewall to Allow Web Traffic *****
 	$ sudo ufw allow 27017/tcp
 	$ sudo ufw allow 27017/udp
@@ -594,7 +615,8 @@
 	
 	***** make MongoDB starts at every booting *****
 	Select Unity Launcher (push windows button)
-	Select Startup Applications > Add 
+	Select Startup Applications 
+		> "Add" Button 
 		> Name : Mongo DB connection
 		> Command : mongod
 		> Comment : open a connection to Mongo Databases
@@ -610,12 +632,9 @@
 	***** install 'Studio 3T' *****
 	
 	
+
 	
-	
-	***** PHP Drivers *****
-	$ sudo apt update
-	$ sudo apt install --install-suggests php7.0*
-	
+	***** restart / trouble shooting *****
 	$ sudo systemctl restart mysql
 	$ sudo systemctl restart postgresql
 	$ sudo systemctl restart apache2
@@ -1034,8 +1053,13 @@
 	$ sudo apt update
 	$ sudo apt install copyq
 
-
-
+49. install 'Simple Screen Recorder'
+	* link : http://www.maartenbaert.be/simplescreenrecorder/
+	
+	$ sudo add-apt-repository ppa:maarten-baert/simplescreenrecorder
+	$ sudo apt update
+	$ sudo apt install simplescreenrecorder
+	$ sudo apt-get install simplescreenrecorder
 
 
 

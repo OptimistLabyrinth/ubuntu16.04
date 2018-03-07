@@ -13,7 +13,10 @@
 	
 1. System Settings > Software & Updates > Other_Software > check 'Canonical Partners'
 
-2. System Settings > Appearance, Brightness & Lock, Display, Keyboard, Mouse & Touchpad, Power, Sound, Security & Privacy 
+2-1. System Settings > Appearance, Brightness & Lock, Display, Keyboard, Mouse & Touchpad, Power, Sound, Security & Privacy 
+
+2-2. Enable Minimize on Click
+	$ gsettings set org.compiz.unityshell:/org/compiz/profiles/unity/plugins/unityshell/ launcher-minimize-window true
 
 3. 	$ sudo apt update
 	$ sudo apt upgrade

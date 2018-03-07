@@ -1072,6 +1072,20 @@
 	$ sudo apt install simplescreenrecorder
 	$ sudo apt-get install simplescreenrecorder
 
+50. Install JDBC Connector from apt-package 
+
+	$ sudo apt update
+	$ sudo apt install libmysql-java
+	
+    Go to /usr/share/java, there you can find the mysql-connector-java.jar file
+
+
+
+
+
+
+
+
 
 
 

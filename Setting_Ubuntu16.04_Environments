@@ -59,6 +59,8 @@
 	$ cd
 	$ cd Downloads
 	$ sudo dpkg -i google-chrome-stable_current_amd64.deb
+	$ sudo apt install -f
+	$ sudo dpkg -i google-chrome-stable_current_amd64.deb
 
     Go to chrome://settings > Advanced Settings > System > uncheck 'background app keep going after exit'
 

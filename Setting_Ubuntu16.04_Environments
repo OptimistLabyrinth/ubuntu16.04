@@ -331,7 +331,7 @@
 
 	$ sudo apt update
 	$ sudo apt upgrade
-	$ sudo apt install --install-suggests apache2*
+	$ sudo apt install apache2*
 
 	$ sudo gedit /etc/apache2/mods-enabled/dir.conf
 		==>>
@@ -407,7 +407,7 @@
 
 	$ sudo apt update
 	$ sudo apt upgrade
-	$ sudo apt-get install --install-suggests mysql-server mysql-client mysql-workbench
+	$ sudo apt-get install mysql-server mysql-client mysql-workbench
 
 	***********************************
 	*** [ Kerberos Authentication ] ***
@@ -450,7 +450,7 @@
 
 34. install 'PHP' 
 
-	$ sudo apt install --install-suggests php7.0 libapache2-mod-php7.0
+	$ sudo apt install php7.0 libapache2-mod-php7.0
 	
 	$ sudo gedit /etc/php/7.0/apache2/php.ini
 		==>>
@@ -506,7 +506,7 @@
 
 	***** PHP Drivers *****
 	$ sudo apt update
-	$ sudo apt install --install-suggests php7.0*
+	$ sudo apt install php7.0*
 	
 
 	** ** Trouble Shooting ** **
@@ -522,7 +522,7 @@
 
 	$ sudo apt update
 	$ sudo apt upgrade
-	$ sudo apt install --install-suggests postgresql-server-dev-9.5 postgresql-client-9.5 postgresql-contrib-9.5 postgresql-plpython-9.5 postgresql-plpython3-9.5 postgresql-9.5 pgadmin3*
+	$ sudo apt install postgresql-server-dev-9.5 postgresql-client-9.5 postgresql-contrib-9.5 postgresql-plpython-9.5 postgresql-plpython3-9.5 postgresql-9.5 pgadmin3*
 	
 	$ sudo -u postgres psql
 	
@@ -564,7 +564,7 @@
 	
 	***** PostgreSQL connectors ***** 
 	$ sudo apt update
-	$ sudo apt install --install-suggests libghc-postgresql-libpq-dev libpqxx-4.0 libpqxx-dbg libpqxx-dev libpqxx-doc libpostgresql-jdbc-java python-psycopg2 python3-psycopg2 
+	$ sudo apt install libghc-postgresql-libpq-dev libpqxx-4.0 libpqxx-dbg libpqxx-dev libpqxx-doc libpostgresql-jdbc-java python-psycopg2 python3-psycopg2 
 
 
 36. install 'Mongo DB' 
@@ -576,7 +576,7 @@
 	$ sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 2930ADAE8CAF5059EE73BB4B58712A2291FA4AD5
 	$ echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.6 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.6.list
 	$ sudo apt update
-	$ sudo apt install --install-suggests mongodb-org*
+	$ sudo apt install mongodb-org*
 	$ sudo apt upgrade
 
 	***** After Mongo DB is successfully installed *****
@@ -738,7 +738,7 @@
 	$ sudo apt install cpu-checker
 	$ egrep -c '(vmx|svm)' /proc/cpuinfo
 	$ kvm-ok
-	$ sudo apt install --install-suggests qemu-kvm libvirt-bin ubuntu-vm-builder bridge-utils ia32-libs-multiarch
+	$ sudo apt install qemu-kvm libvirt-bin ubuntu-vm-builder bridge-utils ia32-libs-multiarch
 
 38. install eclipse-oxygen 
 	* link : http://www.eclipse.org/downloads/eclipse-packages/ 
@@ -938,7 +938,7 @@
 	$ curl -L https://packagecloud.io/AtomEditor/atom/gpgkey | sudo apt-key add -
 	$ sudo sh -c 'echo "deb [arch=amd64] https://packagecloud.io/AtomEditor/atom/any/ any main" > /etc/apt/sources.list.d/atom.list'
 	$ sudo apt-get update
-	$ sudo apt install --install-suggests atom
+	$ sudo apt install atom
 	
 	***** Another way to install ATOM ***** 
 	* link : http://www.elinuxbook.com/install-atom-text-editor-in-ubuntu-16-04/ 
@@ -1028,8 +1028,8 @@
 	* link : https://help.ubuntu.com/lts/serverguide/lxc.html
 	
 	$ sudo apt update
-	$ sudo apt install --install-suggests lxc
-	$ sudo apt install --install-suggests lxd
+	$ sudo apt install lxc
+	$ sudo apt install lxd
 	
 	
 	**** LET'S START USING LINUX CONTATINER *****

@@ -13,17 +13,17 @@
 	
 1. System Settings > Software & Updates > Other_Software > check 'Canonical Partners'
 
-2-1. System Settings > Appearance, Brightness & Lock, Display, Keyboard, Mouse & Touchpad, Power, Sound, Security & Privacy 
+1. System Settings > Appearance, Brightness & Lock, Display, Keyboard, Mouse & Touchpad, Power, Sound, Security & Privacy 
 
-2-2. Enable Minimize on Click
+1. Enable Minimize on Click
 	$ gsettings set org.compiz.unityshell:/org/compiz/profiles/unity/plugins/unityshell/ launcher-minimize-window true
 
-3. 	$ sudo apt update
+1. 	$ sudo apt update
 	$ sudo apt upgrade
 
-4. System Settings > Language Support (Then Wait until the Installation Finishes)
+1. System Settings > Language Support (Then Wait until the Installation Finishes)
 
-5. Linux Graphics Driver 
+1. Linux Graphics Driver 
 
 	$ sudo add-apt-repository ppa:graphics-drivers/ppa
 	$ sudo apt update
@@ -31,18 +31,18 @@
 
    System Settings > Software & Updates > Additional Drivers > check [proper nvidia graphics driver]
 
-6. 	$ sudo apt update
+1. 	$ sudo apt update
 	$ sudo apt install ubuntu-restricted-extras
 
-7-1. 	$ sudo apt update
+1. 	$ sudo apt update
 	$ sudo apt install unity-tweak-tool
 
-7-2. install 'gedit-plugins'
+1. install 'gedit-plugins'
 
 	$ sudo apt update
 	$ sudo apt install gedit-plugins gedit-developer-plugins gedit-latex-plugin gedit-source-code-browser-plugin
 
-8. Install Libreoffice latest version 5.4
+1. Install Libreoffice latest version 5.4
 
  	$ sudo apt remove --purge --auto-remove libreoffice*
 	$ sudo apt autoclean
@@ -52,9 +52,9 @@
 	$ sudo apt update
 	$ sudo apt install libreoffice
 
-9. Ubuntu Software > GIMP, Inkscape, VLC, bleachbit, GParted
+1. Ubuntu Software > GIMP, Inkscape, VLC, bleachbit, GParted
 
-10. install 'Google Chrome' 
+1. install 'Google Chrome' 
 	* link : https://askubuntu.com/questions/911976/how-to-install-google-chrome-browser-on-ubuntu
 	
 	Visit <https://www.google.com/chrome/> and download "google-chrome-stable_current_amd64.deb" file
@@ -68,7 +68,7 @@
     Go to chrome://settings > Advanced Settings > System > uncheck 'background app keep going after exit'
 
 ***** Too Slow *****
-11. install 'Spotify for Ubuntu' 
+1. install 'Spotify for Ubuntu' 
 
 	$ sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 0DF731E45CE24F27EEEB1450EFDC8610341D9410
 	$ echo deb http://repository.spotify.com stable non-free | sudo tee /etc/apt/sources.list.d/spotify.list
@@ -76,7 +76,7 @@
 	$ sudo apt install spotify-client
 ********************
 
-12. install 'Lightworks Free' 
+1. install 'Lightworks Free' 
 
 	* link : https://www.lwks.com/index.php?option=com_lwks&view=download&Itemid=206
 
@@ -86,21 +86,21 @@
 	$ sudo apt install -f
 	$ sudo dpkg -i lwks
 
-13.	$ sudo apt update
+1.	$ sudo apt update
  	$ sudo apt install htop 
 
-14. install 'Adobe Flash Plugins' 
+1. install 'Adobe Flash Plugins' 
 
 	$ sudo apt update
 	$ sudo apt install adobe-flashplugin
 
-15. Zoom in & Zoom out 
+1. Zoom in & Zoom out 
     System Settings > Keyboard > shortcuts > Universal Access > (Here) 
     (1) Zoom in : ctrl + = 
     (2) Zoom out : ctrl + - 
     Both of above buttons are just next to backspace button. Then you can use with number-keypad +/- buttons. 
 
-16. Modity Mouse Scroll Wheel Speed
+1. Modity Mouse Scroll Wheel Speed
 
 	* link : http://imwheel.sourceforge.net/imwheel.1.html
 	* link : https://minjejeon.github.io/learningstock/2016/07/08/change-mouse-wheel-speed-using-imwheel.html
@@ -119,7 +119,7 @@
 
 
 *************************************************************************************************************************************
-17. Ubuntu - 16.04 한글 설정
+1. Ubuntu - 16.04 한글 설정
 
 	기본으로 설치시 English만 설치되었다고 가정하고 한글 설치와 한영 전환 설정하는 것을 어떻게 하는지 알아보자.
 	한글 설치
@@ -149,18 +149,27 @@
 
 
 
-18. install TLP for Linux 
+1. install TLP for Linux 
 
 	$ sudo add-apt-repository ppa:linrunner/tlp
 	$ sudo apt update
 	$ sudo apt install tlp tlp-rdw
 	$ sudo tlp start
 
-19. Enable Recursive Search 
+1. install Stacer
+	* link : 
+
+	-> Go to <https://github.com/oguzhaninan/Stacer/releases> and downloads .deb package file
+	$ cd
+	$ cd Downloads
+	$ sudo apt update
+	$ sudo dpkg -i stacer_1.0.9-1_amd64.deb
+
+1. Enable Recursive Search 
 
 	$ gsettings set org.gnome.nautilus.preferences enable-interactive-search false
 
-20. Set up Firewall (UFW)
+1. Set up Firewall (UFW)
 	* link : https://www.digitalocean.com/community/tutorials/how-to-set-up-a-firewall-with-ufw-on-ubuntu-16-04 
 
 	$ sudo ufw default deny incoming
@@ -181,7 +190,7 @@
 	$ sudo ufw enable
 	$ sudo ufw status numbered
 
-21. install codecs and DVD player 
+1. install codecs and DVD player 
 
 	$ sudo apt-get install ffmpeg gxine libdvdread4 icedax tagtool libdvd-pkg easytag id3tool lame libxine2-ffmpeg nautilus-script-audio-convert libmad0 mpg321 libavcodec-extra gstreamer1.0-libav
 
@@ -191,16 +200,12 @@
 	$ sudo dpkg-reconfigure libdvd-pkg
 	$ sudo apt-mark hold libdvd-pkg libdvdcss2 libdvdcss-dev
 
-22. install compress/decompress tools 
+1. install compress/decompress tools 
 
 	$ sudo apt-get install p7zip-rar p7zip-full unace unrar zip unzip sharutils rar uudeview mpack arj cabextract file-roller
 
-23. Tools/Tweaks for Laptop Power Management
-
-	$ sudo apt-get install laptop-mode-tools
-
 **** For Later Use (optional) *****
-24. To Reset Unity Settings 
+1. To Reset Unity Settings 
 
 	$ sudo apt install dconf-tools
 	$ dconf reset -f /org/compiz/
@@ -208,10 +213,10 @@
 	$ unity --reset-icons
 ***********************************
 
-25. Conky Collections 
+1. Conky Collections 
 	* link : http://www.noobslab.com/2012/07/conky-collection-for-ubuntulinux.html 
 
-26. install 'Kodi' on Ubuntu 16.04
+1. install 'Kodi' on Ubuntu 16.04
 
 	$ sudo apt update
 	$ sudo apt install software-properties-common
@@ -219,11 +224,11 @@
 	$ sudo apt update
 	$ sudo apt install kodi
 
-27. Show hidden startup apps
+1. Show hidden startup apps
 
 	$ sudo sed -i "s/NoDisplay=true/NoDisplay=false/g" /etc/xdg/autostart/*.desktop
 
-28. Change Swapiness Value
+1. Change Swapiness Value
 
 	$ cat /proc/sys/vm/swappiness
 	$ sudo gedit /etc/sysctl.conf
@@ -233,7 +238,7 @@
 		<<==
 	$ cat /proc/sys/vm/swappiness
 
-29. Ubuntu Best Indicators 
+1. Ubuntu Best Indicators 
 
 	(1) CPU clock frequency 
 	$ sudo apt update
@@ -277,13 +282,13 @@
 	$ sudo apt install lm-sensors hddtemp
 	$ sudo apt install psensor
 
-30. install 'PPA/Key Manager'
+1. install 'PPA/Key Manager'
 
 	$ sudo add-apt-repository ppa:webupd8team/y-ppa-manager
 	$ sudo apt update
 	$ sudo apt install ppa-purge y-ppa-manager
 
-31. install 'Winehq & PlayOnLinux' + 'Crossover'
+1. install 'Winehq & PlayOnLinux' + 'Crossover'
 	* link : http://ubuntuhandbook.org/index.php/2017/10/wine-stable-2-0-3-released-with-various-fixes-how-to-install/
 	* link : https://sysads.co.uk/2016/05/16/how-to-install-playonlinux-4-2-10-on-ubuntu-16-04/
 
@@ -298,7 +303,7 @@
 	$ sudo apt update
 	$ sudo apt install playonlinux
 
-31. install Oracle-jdk
+1. install Oracle-jdk
 	* link : https://medium.com/@shaaslam/how-to-install-oracle-java-9-in-ubuntu-16-04-671e598f0116
 	* link : https://www.digitalocean.com/community/tutorials/how-to-install-java-with-apt-get-on-ubuntu-16-04
 
@@ -327,7 +332,7 @@
 
 
 
-32. install 'Apache Server' 
+1. install 'Apache Server' 
 
 	$ sudo apt update
 	$ sudo apt upgrade
@@ -403,7 +408,7 @@
 	$ sudo apt update
 	$ sudo apt install libassa-3.5-5v5
 
-33. install 'MySQL' 
+1. install 'MySQL' 
 
 	$ sudo apt update
 	$ sudo apt upgrade
@@ -448,7 +453,7 @@
 	$ sudo apt update
 	$ sudo apt install libreoffice-mysql-connector libmysql++-dev libmysql++3v5 libmysqlcppconn7v5 libmysql-java python-mysql.connector python3-mysql.connector
 
-34. install 'PHP' 
+1. install 'PHP' 
 
 	$ sudo apt install php7.0 libapache2-mod-php7.0
 	
@@ -514,7 +519,7 @@
 	$ sudo systemctl restart apache2
 
 
-35. install 'PostgreSQL'
+1. install 'PostgreSQL'
 	* link : https://www.postgresql.org/download/linux/ubuntu/
 	* link : 
 	* link : 
@@ -567,7 +572,7 @@
 	$ sudo apt install libghc-postgresql-libpq-dev libpqxx-4.0 libpqxx-dbg libpqxx-dev libpqxx-doc libpostgresql-jdbc-java python-psycopg2 python3-psycopg2 
 
 
-36. install 'Mongo DB' 
+1. install 'Mongo DB' 
 	* link : https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/
 	* link : https://www.youtube.com/watch?v=mlODdwoK56A
 	* link : https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-mongodb-on-ubuntu-16-04
@@ -658,7 +663,7 @@
 
 
 
-37. install 'Android Studio'
+1. install 'Android Studio'
 	* link : https://developer.android.com/studio/install.html
 	
 	Go to <https://developer.android.com/studio/index.html> and Downloads the appropriate file
@@ -740,7 +745,7 @@
 	$ kvm-ok
 	$ sudo apt install qemu-kvm libvirt-bin ubuntu-vm-builder bridge-utils ia32-libs-multiarch
 
-38. install eclipse-oxygen 
+1. install eclipse-oxygen 
 	* link : http://www.eclipse.org/downloads/eclipse-packages/ 
 	* link : http://ubuntuhandbook.org/index.php/2016/01/how-to-install-the-latest-eclipse-in-ubuntu-16-04-15-10/
 	
@@ -776,7 +781,7 @@
 		
 		<<==
 
-39. install 'Visual Studio Code'
+1. install 'Visual Studio Code'
 	* link : https://code.visualstudio.com/docs/setup/linux
 	
 	$ curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
@@ -854,7 +859,7 @@
 	code --install-extension Kasik96.swift 
 	code --install-extension DotJoshJohnson.xml 
 	
-40. install 'Git'
+1. install 'Git'
 	
 	$ sudo apt update
 	$ sudo apt install git
@@ -862,7 +867,7 @@
 	$ sudo apt update
 	$ sudo apt install build-essential libssl-dev libcurl4-gnutls-dev libexpat1-dev gettext unzip
 
-41. install 'Anaconda'
+1. install 'Anaconda'
 	* link : https://poweruphosting.com/blog/install-anaconda-python-ubuntu-16-04/
 	* link : https://www.digitalocean.com/community/tutorials/how-to-install-the-anaconda-python-distribution-on-ubuntu-16-04 
 	* link : https://medium.com/@GalarnykMichael/install-python-on-ubuntu-anaconda-65623042cb5a 
@@ -914,7 +919,7 @@
 		
 		<<==
 
-42-1. install 'Vivaldi Browser'
+1. install 'Vivaldi Browser'
 	* link : https://www.linuxbabe.com/ubuntu/install-vivaldi-1-2-ubuntu-16-04-via-official-apt-repository 
 	
 	$ wget http://repo.vivaldi.com/stable/linux_signing_key.pub
@@ -924,7 +929,7 @@
 	$ sudo apt update
 	$ sudo apt install vivaldi-stable
 
-42-2. install 'Opera Browser'
+1. install 'Opera Browser'
 	* link : https://deb.opera.com/manual.html
 	
 	$ sudo add-apt-repository 'deb https://deb.opera.com/opera-stable/ stable non-free'
@@ -932,7 +937,7 @@
 	$ sudo apt update
 	$ sudo apt-get install opera-stable
 
-43-1. install 'atom' 
+1. install 'atom' 
 	* link : http://flight-manual.atom.io/getting-started/sections/installing-atom/#platform-linux
 	
 	$ curl -L https://packagecloud.io/AtomEditor/atom/gpgkey | sudo apt-key add -
@@ -955,7 +960,7 @@
 	***** apm packages recommends ***** (Command : apm install ~)
 	-> script emmet atom-beautify ask-stack git-blame git-plus git-time-machine linter project-manager highlight-selected file-icons pigments minimap expose pane-layout-plus open-recent autocomplete-paths todo-show autoclose-html auto-detect-indentation keycount color-picker javascript-snippets atom-css-comb remote-edit goto-definition merge-conflicts simple-drag-drop-text custom-title android android-debugger 
 
-43-2. Setting Atom Editor as Swift IDE 
+1. Setting Atom Editor as Swift IDE 
 	* link : https://medium.com/@addamb/getting-started-with-vapor-and-swift-on-ubuntu-16-04-31a426654115 
 	* link : https://www.makeuseof.com/tag/start-programming-swift-ubuntu/ 
 	* link : https://swift.org/download/#releases 
@@ -990,7 +995,7 @@
 	# e=swiftProj01
 	# p=/home/yks93/swift-4.0.3-RELEASE-ubuntu16.04/usr/bin
 
-44. install 'intelliJ'
+1. install 'intelliJ'
 	* link : https://www.jetbrains.com/help/idea/install-and-set-up-intellij-idea.html
 	***** Never Download intelliJ IDE from PPA something like ppa:mmk2410~*****
 	
@@ -1011,7 +1016,7 @@
 	$ cd /home/yks93/idea-IC-173.3942.27/bin
 	$ bash idea.sh
 	
-45. install 'Star UML' 
+1. install 'Star UML' 
 	* link : 
 	* link : 
 	
@@ -1024,7 +1029,7 @@
 	$ sudo dpkg -i libgcrypt11_1.5.3-2ubuntu4.2_amd64.deb
 	$ sudo dpkg -i StarUML-v2.8.0-64-bit.deb
 	
-46. install 'Linux Container'
+1. install 'Linux Container'
 	* link : https://help.ubuntu.com/lts/serverguide/lxc.html
 	
 	$ sudo apt update
@@ -1042,7 +1047,7 @@
 	* link : https://nwgat.ninja/quick-easy-lxc-container-on-ubuntu-16-04/
 	* link : https://linuxconfig.org/getting-started-with-lxd-containers-on-ubuntu-16-04
 
-47. GUI Tools to see HARDWARE INFORMATION in Ubuntu/Debian Linux
+1. GUI Tools to see HARDWARE INFORMATION in Ubuntu/Debian Linux
 	* link : https://www.techgainer.com/5-gui-tools-to-see-hardware-information-in-ubuntulinux/
 	
 	$ sudo add-apt-repository ppa:i-nex-development-team/stable
@@ -1057,14 +1062,14 @@
 	
 	$ sudo apt-get install lshw-gtk
 
-48. install Clipboard Manager 'CopyQ'
+1. install Clipboard Manager 'CopyQ'
 	* link : https://github.com/hluk/CopyQ
 	
 	$ sudo add-apt-repository ppa:hluk/copyq
 	$ sudo apt update
 	$ sudo apt install copyq
 
-49. install 'Simple Screen Recorder'
+1. install 'Simple Screen Recorder'
 	* link : http://www.maartenbaert.be/simplescreenrecorder/
 	
 	$ sudo add-apt-repository ppa:maarten-baert/simplescreenrecorder
@@ -1072,7 +1077,7 @@
 	$ sudo apt install simplescreenrecorder
 	$ sudo apt-get install simplescreenrecorder
 
-50. Install JDBC Connector from apt-package 
+1. Install JDBC Connector from apt-package 
 
 	$ sudo apt update
 	$ sudo apt install libmysql-java

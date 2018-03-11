@@ -912,7 +912,7 @@
 		Comment=Anaconda Navigator of env "py3"
 		Exec=bash -c 'export PATH="$PATH" && /home/yks93/anaconda3/bin/anaconda-navigator'
 		Categories=Development;Science;IDE;Qt;Education;
-		Icon=/home/yks93/anaconda3/anaconda-navigator-icon.png
+		Icon=/home/yks93//home/yks93/yks93F/anaconda3anaconda3/anaconda-navigator-icon.png
 		Terminal=false
 		StartupNotify=true
 		MimeType=text/x-python;

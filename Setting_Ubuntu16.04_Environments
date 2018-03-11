@@ -719,7 +719,7 @@
 	
 	***** create desktop launcher for Android-Studio *****
 	
-	$ sudo gedit /usr/share/applications/android-studio.desktop
+	$ sudo gedit /home/yks93/.local/share/applications/android-studio.desktop
 		==>>
 		
 		[Desktop Entry]
@@ -765,7 +765,7 @@
 		:-> Window > Preferences > Team > SVN, click "Get connectors" 
 		:-> Eclipse Marketplace > search 'PyDev' 
 	
-	$ sudo gedit /usr/share/applications/eclipse-cc++.desktop
+	$ sudo gedit /home/yks93/.local/share/applications/eclipse-cc++.desktop
 		==>> 
 		
 		[Desktop Entry]
@@ -901,23 +901,48 @@
 	Go to <https://www.google.co.kr/search?q=anaconda-navigator+icon&source=lnms&tbm=isch&sa=X&ved=0ahUKEwjQpv2yi5_YAhWBsJQKHWWtDl8Q_AUICigB&biw=1331&bih=678#imgrc=_IY1Cb5Ad-UBKM:> 
 	and download the icon image .png file 
 	
-	$ sudo gedit /usr/share/applications/anaconda-navigator.desktop
-		==>>
-		
-		[Desktop Entry]
-		Version=1.6
-		Type=Application
-		Name=Anaconda-Navigator
-		GenericName=Anaconda
-		Comment=Anaconda Navigator of env "py3"
-		Exec=bash -c 'export PATH="$PATH" && /home/yks93/anaconda3/bin/anaconda-navigator'
-		Categories=Development;Science;IDE;Qt;Education;
-		Icon=/home/yks93//home/yks93/yks93F/anaconda3anaconda3/anaconda-navigator-icon.png
-		Terminal=false
-		StartupNotify=true
-		MimeType=text/x-python;
-		
-		<<==
+	$ sudo gedit /home/yks93/.local/share/applications/anaconda-navigator.desktop
+	==>>
+	
+	[Desktop Entry]
+	Version=1.6
+	Type=Application
+	Name=Anaconda-Navigator
+	GenericName=Anaconda
+	Comment=Anaconda Navigator of env "py3"
+	Exec=bash -c 'export PATH="$PATH" && /home/yks93/anaconda3/bin/anaconda-navigator'
+	Categories=Development;Science;IDE;Qt;Education;
+	Icon=/home/yks93//home/yks93/yks93F/anaconda3anaconda3/anaconda-navigator-icon.png
+	Terminal=false
+	StartupNotify=true
+	MimeType=text/x-python;
+	
+	<<==
+
+1. install PyCharm-Community IDE
+	* link : https://www.jetbrains.com/pycharm/download/#section=linux
+
+	***** Create Desktop Icon *****
+	$ cd
+	$ cd .local/share/applications/
+	$ touch pycharm.desktop
+	$ vi pycharm.desktop
+	----->
+
+	[Desktop Entry]
+	Version=1.0
+	Type=Application
+	Name=PyCharm-Community
+	GenericName=PyCharm
+	Comment=Python Integrated Development Environment Tool by JetBrains
+	Exec=bash -c 'export PATH="$PATH" && /home/yks93/yks93F/pycharm-community-2017.3.4/bin/pycharm.sh'
+	Categories=Development;Science;IDE;Education;
+	Icon=/home/yks93/yks93F/pycharm-community-2017.3.4/bin/pycharm.png
+	Terminal=false
+	StartupNotify=true
+
+	<-----
+
 
 1. install 'Vivaldi Browser'
 	* link : https://www.linuxbabe.com/ubuntu/install-vivaldi-1-2-ubuntu-16-04-via-official-apt-repository 

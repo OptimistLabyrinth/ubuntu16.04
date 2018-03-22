@@ -312,8 +312,10 @@
 
 	$ sudo apt install oracle-java9-installer
 	$ sudo update-alternatives --config java
-	$ sudo gedit /etc/environment => JAVA_HOME="/usr/lib/jvm/java-9-oracle"
-	$ export JAVA_HOME= ~ 
+	$ cd /etc/profile.d 
+	$ sudo touch java_home.sh
+	$ sudo vi java_home.sh
+		=> export JAVA_HOME="/usr/lib/jvm/java-9-oracle"
 	$ echo $JAVA_HOME
 
 
@@ -883,8 +885,8 @@
 	$ bash Anaconda3-X.X.X-Linux-x86_64.sh
 	
 	At the last message asking if you're adding path to $PATH => Answer [NO]
-	Later I can use /etc/environment && /etc/profile.d/myenvvars.sh to use the global $PATH 
-		$PATH = $PATH + /home/yks93/anaconda3/bin
+	Later I can use /etc/profile.d/myenvvars.sh to use the global $PATH 
+		export PATH="/home/yks93/anaconda3/bin:$PATH"
 	
 	$ python -V
 	$ python3 -V
@@ -903,6 +905,7 @@
 	and download the icon image .png file 
 	
 	$ sudo gedit /home/yks93/.local/share/applications/anaconda-navigator.desktop
+	==>> You have to search anaconda-navigator-icon.png by yourself on the internet.
 	==>>
 	
 	[Desktop Entry]

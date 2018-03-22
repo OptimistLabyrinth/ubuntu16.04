@@ -682,16 +682,17 @@
 	$ pwd
 		::= /home/yks93/android-studio
 	
-	$ sudo gedit /etc/environment 
+	$ cd /etc/profile.d
+	$ sudo touch android_env.sh
+	$ sudo vi android_env.sh
 		==>>
-		$ANDROID_HOME=/home/yks93/android-studio
-		$PATH = $PATH + $ANDROID_HOME/bin
+		$ANDROID_HOME="/home/yks93/android-studio"
 		<<==
 	
 	$ sudo gedit /etc/profile.d/myenvvars.sh
 		==>> 
-		$ANDROID_HOME=/home/yks93/android-studio
-		$PATH = $PATH + $ANDROID_HOME/bin
+		export ANDROID_HOME="/home/yks93/android-studio"
+		export PATH="$ANDROID_HOME/bin:$PATH"
 		<<==
 	
 	$ cd
@@ -704,20 +705,20 @@
 		-> 'Android SDK Location -- should be : /home/yks93/android-SDK
 	
 	***** After finishing Initial Android-Studio Setup *****
-	$ cd
-	$ sudo gedit /etc/environment 
+	$ cd /etc/profile.d
+	$ sudo touch android
 		==>>
-		$SDK_HOME=/home/yks93/android-sdk
-		$PATH = $PATH + $SDK_HOME/tools + $SDK_HOME/platform-tools
+		export SDK_HOME="/home/yks93/android-sdk"
 		<<==
 	
 	$ sudo gedit /etc/profile.d/myenvvars.sh
 		==>>
-		$SDK_HOME=/home/yks93/android-sdk
-		$PATH = $PATH + $SDK_HOME/tools + $SDK_HOME/platform-tools
+		export PATH="$SDK_HOME/tools:$SDK_HOME/platform-tools:$PATH"
 		<<==
 	
 	***** create desktop launcher for Android-Studio *****
+	==>> There is an Easier Way. 
+	==>> Just Click the Android Studio Setting configure button and Look for the menu.
 	
 	$ sudo gedit /home/yks93/.local/share/applications/android-studio.desktop
 		==>>

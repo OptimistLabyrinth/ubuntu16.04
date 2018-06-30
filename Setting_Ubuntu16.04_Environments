@@ -8,6 +8,14 @@
 <mistake on Terminal CLI> 
 	:-> when pressed "ctrl + s"(=freezes), press "ctrl + q"(=unfreezes) 
 
+0. System Configuration
+	$ cat /proc/cpuinfo						-> CPU Info
+	$ cat /etc/os-release						-> OS Info
+	$ cat /proc/meminfo						-> MEMORY Info
+	$ unmae -a							-> Kernel Info
+	$ cat /proc/driver/nvidia/gpus/0000:01:00.0/information		-> GPU Info
+	$ 
+
 0. System Settings > Software & Updates > Ubuntu Software(tab) 
 	->->-> stetch combobox "Download From" > other... > click button "Select Best Server"
 	

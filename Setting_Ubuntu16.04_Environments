@@ -7,6 +7,38 @@
 
 <mistake on Terminal CLI> 
 	:-> when pressed "ctrl + s"(=freezes), press "ctrl + q"(=unfreezes) 
+	
+0. keyboard shortcuts
+	0) Launchers
+		Launch Terminal = ctrl + alt + T
+	0) Navigations
+		Move Window one workspace to the left = shift + super + left
+		Move Window one workspace to the right = shift + super + right
+		Move Window one workspace to the up = shift + super + up
+		Move Window one workspace to the down = shift + super + down
+		Switch Applications = super + tab
+		Switch to workspace 1 = super + home
+		Switch to last workspace = super + end
+		Move to workspace left = super + left
+		Move to workspace right = super + right
+		Move to workspace above = super + up`
+		Move to workspace below = super + down
+	0) System
+		Log out = ctrl + alt + delete
+		Lock Screen = ctrl + alt + L
+	0) Universal Access
+		Zoom in = shift + ctrl + +
+		Zoom out = shift + ctrl + -
+	0) Windows
+		Toggle Fullscreen Mode = super + F
+		Maximize window = ctrl + super + up
+		Restore window = ctrl + super + down
+		Close window = alt + F4
+		Hide window = super + H
+		Move window = alt + F7
+		Resize window = alt + F8
+		//View Split on left = ctrl + super + left
+		//View Split on Right = ctrl + super + right
 
 0. System Configuration
 	$ cat /proc/cpuinfo						-> CPU Info
@@ -25,6 +57,34 @@
 
 1. Enable Minimize on Click
 	$ gsettings set org.compiz.unityshell:/org/compiz/profiles/unity/plugins/unityshell/ launcher-minimize-window true
+	
+1. Gnome Desktop Environment
+	GTK+ Theme : MacOS High Sierra
+	Icons : MacOS`11
+	Cursor : DMZ-Black
+	Shell Theme : MacOS-High-Sierra-Dark
+	
+	Extensions
+		Appfolders management extension
+		Applications menu
+		Auto move windows
+		Battery percentage
+		Clipboard indicator
+		Coverflow alt-tabl
+		Dash to dock
+		extensions (enable/disable easily from menu in the top)
+		Gno-menu
+		Native window placement
+		No topleft hot corner
+		Places status indicator
+		Refresh wifi connections
+		Removable drive menu
+		Remove dropdown arrows
+		Todo.txt
+		User themes
+		Workspace Grid
+		Workspace indicator
+		Windownavigator
 
 1. 	$ sudo apt update
 	$ sudo apt upgrade

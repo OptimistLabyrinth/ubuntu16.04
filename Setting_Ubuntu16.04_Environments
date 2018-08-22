@@ -187,7 +187,24 @@
 
 
 *************************************************************************************************************************************
-1. Ubuntu - 16.04 한글 설정
+1. Ubuntu - 16.04 한글 설정 (Gnome Desktop Environment)
+	    	Settings > Keyboard > Shortcuts Tab > Typing을 선택한다.
+    		Switch to Next source, Switch to Previous sourc, Compose Key, Alternative Characters Key를 모두 Disabled로 선택한다. Disabled로 선택하기 위해서는 backspace를 누르면 된다.
+    		Compose Key의 Disabled를 길게 눌러 Right Alt를 선택한다.
+    		Switch to next source는 한영키를 눌러 Multikey를 선택한다. 반드시 Compose Key 설정이 먼저되어야 Multikey를 선택할 수 있다.
+
+		Settings > Region & Language 로 들어가면 Input Sources에 English 한 가지 밖에 없으므로 + 버튼을 눌러서 언어를 추가한다.
+		추가하는 방법은 Korean > Korean(Hangul) 을 고른 뒤 Add 버튼 클릭
+		방금 추가된 Korean(Hangul)을 선택해서 파랗게 만든 뒤 오른쪽 아래에 "설정(-톱니바퀴 모양)" 버튼 클릭
+		IBusHangul Setup 이라는 제목의 창이 나오는데
+		Hangul 탭 > Etc 부분 > [ ] Start in hangul mode 를 클릭해서 V 표시하기 
+
+    		log out을 한후 다시 log in을 한다.
+    		한글/영어가 한영키로 전환되는지 확인한다.
+
+
+
+1. Ubuntu - 16.04 한글 설정 (Unity Desktop Environment)
 
 	기본으로 설치시 English만 설치되었다고 가정하고 한글 설치와 한영 전환 설정하는 것을 어떻게 하는지 알아보자.
 	한글 설치
@@ -210,7 +227,6 @@
     		Global Config tab에서 Program > Share State Among Window > All을 선택한다.
 
 	테스트
-
     		log out을 한후 다시 log in을 한다.
     		한글/영어가 한영키로 전환되는지 확인한다.
 *************************************************************************************************************************************

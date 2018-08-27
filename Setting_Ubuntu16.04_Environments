@@ -1198,6 +1198,19 @@
 	
     Go to /usr/share/java, there you can find the mysql-connector-java.jar file
 
+1. Install Kaza (screen recorder)
+	***** useful shortcuts *****
+	start recording 
+		: super + ctrl + R
+	pause recording
+		: super + ctrl + P
+	stop recording
+		: super + ctrl + F
+	show/hide main window
+		: super + ctrl + W
+	quit
+		: super + ctrl + Q
+
 1. Raspbian Images
 	link : https://downloads.raspberrypi.org/raspbian/images/
 

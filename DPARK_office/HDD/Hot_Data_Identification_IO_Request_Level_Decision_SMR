@@ -1,0 +1,26 @@
+ㄱ. HDD vs SDD, 둘 중에 뭐가 더 인기 있을까?
+	상당수가 SSD 로 바뀌고 있기는 하지만 HDD 의 사용비중도 여전히 높다.
+	기업 입장에서는 비용 절감과 용량 확보 차원에서 HDD 를 선호하는 경향도 있다.
+ㄴ. 하드디스크 용량을 늘리기 위한 혁신은 계속되어 왔다
+	1) Longitudinal Magnetic Recording --> Perpendicular Magnetic Recording
+	2) Constant Angular Velocity (각도에 따라서) --> Zone Bit Recording (바깥 쪽에 많은 용량 저장)
+	3) 성능을 향상시키기 위한 기법 중 하나이지만 RD 전용 헤드와 WR 전용 헤드를 따로 두고 관리
+	4) 여러 개의 disk 를 적재해서 사용 (Head Stack Assembly)
+	5) Conventional HDD --> 
+				Head-Assisted Magnetic Recording
+				Shingled Magnetic Recording
+ㄷ. 하드디스크는 하나의 디스크를 Platter 라고 하고 그 안에 수 많은 track 이 동심원을 이루고 있고
+	각각의 트랙에는 수많은 sector 가 존재한다. 데이터를 읽고 쓰려면 바로 이 섹터에 접근해야 한다.
+	하드디스크는 플래터를 회전시키면서 RD/WR 동작을 하기에 random RD/WR 에서는 성능이 떨어진다.
+	또한 하드디스크 용량이 늘어날수록 Seek Time 은 점점 증가해왔다.
+	이를 줄이기 위해서 FAT(File Address Table, 파일의 각 위치 정보를 해당 블록의 맨 앞에 인덱스로 저장) 같은 파일시스템에 의존할 수도 있고, HDD 버퍼(아주 적은 용량, 15~20 Mib 정도에 불과함)를 만들어서 사용할 수도 있다.
+	
+	이런 맥락에서 빈번하게 WR 연산이 일어나는 데이터(Hot Data)를 따로 관리할 수 있다면 HDD 의 성능을 극대화할 수 있다는 결론에 이르게 된다.
+	핫 데이터라는 것은 자주 접근되는 정보라는 의미이다. 이 '자주'라는 말도 최근-자주 와 예전-자주 사이에는 경중이 다르다. 핫 데이터를 별도로 관리하면서 recency 정보까지 얻을 수 있는 알고리즘이 있을지 고민해볼 수 있다.
+	
+	본 논문은 이런 배경 하에서 등장했다.
+
+
+
+
+

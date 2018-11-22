@@ -1,0 +1,116 @@
+[ Question ] SMR 드라이브는 HDD 인데도 불구하고 왜 block 단위로 쓰기를 실행해야 할까?? 섹터 단위로 해도 충분한거 아닐까?? 
+=> 
+
+[ Question ] HDD 속도가 느린 이유는?
+=> Access Time 분석
+	1) Seek Time
+	   헤드를 움직여서 데이터가 존재하는 트랙 위치로 움직이기 (10ms) 
+	2) Rotational Latency
+	   플래터를 회전시켜서 헤드 아래에 데이터가 존재하는 섹터를 가져다놓기 (6ms)
+	3) Command Processing Time
+	   데이터 처리 시간 (0.0003ms)
+	4) Settle Time
+	   헤드를 플래터에 안착시키는데 걸리는 시간 (0.01ms)
+=> Data Transfer Rate
+  => internal rate (디스크 섹터에서 컨트롤러로 전달)
+  	1) Media Rate
+  	   디스크 섹터에서 비트를 읽는 비율
+	2) Sector Overhead Time
+	   컨트롤러 전후처리
+	3) Head Switch Time
+	   헤드가 여러 개인 경우 서로 교대하는 시간
+	4) Cylinder Switch Time
+	   실린더가 여러 개인 경우 서로 교대하는 시간
+  => external rate (컨트롤러에서 호스트 시스템으로 전달)
+	1) 파일시스템의 영향으로
+	2) 데이터가 얼마나 조밀하게 저장되었는지에 따라서
+	3) interleaving <- 현재는 무관한 기술
+=> IOPS 란?
+	Input/Output Operations per second [eye-ops]
+	RANDOM READ, RANDOM WRITE, SEQUENTIAL READ, SEQUENTIAL WRITE
+
+[ Question ] 
+=> 
+
+[ Question ]  GC 과정에서 왜 data fragmentation 이 왜 발생할까??? 
+=> threashold, pre-defined value 에 도달하는 순간 GC 처리가 멈추면서 연속된 데이터의 일부는 destaging 되고 나머지는 S-Block 에 남아있을 수도 있다.
+
+[ Question ] 데이터 블록은 언제 invalid 가 될까?
+=> 한번 write 데이터에 update 를 할 때에 기존에 있던 데이터 트랙과 그 주변 트랙이 invalid 가 된다
+
+[ Question ] Block Level Decision 은 직관적으로 이해가 된다. 그러나 IO Request Level Decision 은 무엇을 말하는 걸까?? 어째서 seek overhead 를 줄일 수 있었을까?
+=> IO Request 중에서 hot, cold 둘 모두를 요청하는 경우에는 access time 이 늘어난다.
+
+[ Question ] 그래서 E-region 둘로 나눠서 H-region / C-region 을 만들었는데 여기서의 hot 과 cold 의 기준은 최근에 IO Request 가 들어왔던 데이터 블록 중에서 구분하는 것이 맞는 걸까??
+=> 
+
+[ Question ] 
+=> 
+
+[ Question ] 
+=> 
+
+[ Question ] 
+=> 
+
+[ Question ] 
+=> 
+
+[ Question ] 
+=> 
+
+[ Question ] 
+=> 
+
+[ Question ] 
+=> 
+
+[ Question ] 
+=> 
+
+[ Question ] 
+=> 
+
+[ Question ] 
+=> 
+
+[ Question ] 
+=> 
+
+[ Question ] 
+=> 
+
+[ Question ] 
+=> 
+
+[ Question ] 
+=> 
+
+[ Question ] 
+=> 
+
+[ Question ] 
+=> 
+
+[ Question ] 
+=> 
+
+[ Question ] 
+=> 
+
+[ Question ] 
+=> 
+
+[ Question ] 
+=> 
+
+[ Question ] 
+=> 
+
+[ Question ] 
+=> 
+
+
+
+
+

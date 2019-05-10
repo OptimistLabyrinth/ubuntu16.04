@@ -1,0 +1,46 @@
+" show line numbers
+set number
+" 1 tab = 4 spaces
+set tabstop=4
+" when indent, 4 spaces will be used
+set shiftwidth=4
+" indicate where the column 80 resides
+set colorcolumn=80
+" status line [root user]
+"   - text: white - background: red
+highlight StatusLine ctermbg=White ctermfg=DarkRed
+
+if has("syntax")
+    syntax on
+endif
+
+" show matching bracket
+set showmatch
+set autoindent
+set smartindent
+" stricter rules for c programs
+set cindent
+
+" always show the status line
+set laststatus=2
+" Format the status line
+set statusline=\ [root]\ %r%m\ CWD:\ %<%{getcwd()}/%f
+set statusline+=%=
+set statusline+=\ %l\,\ %c
+set statusline+=\ \ 
+
+" Delete trailing white space on save, useful for some filetypes ;)
+"fun! CleanExtraSpaces()
+"    let save_cursor = getpos(".")
+"    let old_query = getreg('/')
+"    silent! %s/\s\+$//e
+"    call setpos('.', save_cursor)
+"    call setreg('/', old_query)
+"endfun
+
+" Avoid garbled characters in Chinese language windows OS
+let $LANG='en'
+set langmenu=3n
+source $VIMRUNTIME/delmenu.vim
+source $VIMRUNTIME/menu.vim
+
